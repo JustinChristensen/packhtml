@@ -80,7 +80,7 @@ const packHtml = async ({
         });
     });
 
-    console.log(serializeHtml(doc));
+    return serializeHtml(doc);
 };
 
 module.exports = {

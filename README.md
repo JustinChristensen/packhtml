@@ -64,9 +64,11 @@ packhtml path/to/index.html > out.html
 ### Node.js API
 
 ```javascript
-await packHtml({
+const { packHtml } = require('packhtml');
+
+console.log(await packHtml({
     htmlFile: 'path/to/index.html'
-});
+}));
 ```
 
 

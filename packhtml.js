@@ -8,6 +8,8 @@ const argv = yargs(hideBin(process.argv))
     .command('$0 <html-file>', 'Bundle assets into specified HTML file')
     .argv;
 
-packHtml({
+const packed = await packHtml({
     htmlFile: argv.htmlFile
 });
+
+console.log(packed);
