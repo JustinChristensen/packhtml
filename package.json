@@ -1,0 +1,19 @@
+{
+  "name": "packhtml",
+  "version": "0.1.0",
+  "description": "Bundle assets referenced by an HTML file into a single file",
+  "main": "index.js",
+  "author": "Justin Christensen <wroathe@gmail.com>",
+  "license": "MIT",
+  "bin": {
+    "packhtml": "./packhtml.js"
+  },
+  "devDependencies": {
+    "cssnano": "^5.0.12",
+    "parse5": "^6.0.1",
+    "postcss": "^8.4.4",
+    "rollup": "^2.60.2",
+    "terser": "^5.10.0",
+    "yargs": "^17.3.0"
+  }
+}
