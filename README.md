@@ -5,13 +5,13 @@
 `packHtml` turns:
 
 ```javascript
-// main.js
+// modules/main.js
 import { sayHi } from './a.js';
 sayHi('Bob');
 ```
 
 ```javascript
-// a.js
+// modules/a.js
 export const sayHi = name => {
     console.log(`Hi ${name}`);
 }
