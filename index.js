@@ -7,9 +7,9 @@ const postcss = require('postcss');
 const cssNano = require('cssnano')();
 
 const forEach = (node, predicate, fn) => {
-    const _forEach = (node, i) => {
-        const promise = Promise.resolve((!predicate || predicate(node)) && fn(node, i));
-        return promise.then(() => Promise.all(node.childNodes?.map(_forEach) ?? []));
+    const _forEach = async (node, i) => {
+        if (!predicate || predicate(node)) await fn(node, i);
+        return Promise.all(node.childNodes?.map(_forEach) ?? []);
     };
 
     return _forEach(node, 0);
